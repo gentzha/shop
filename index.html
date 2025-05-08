@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nathzz market</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+      background: url('https://pomf2.lain.la/f/lb43iybf.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+      background-color: rgba(255, 255, 255, 0.7);
+      z-index: 999;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+      margin-top: 120px;
+    }
+
+    .product {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 15px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .product h2 {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      color: #222;
+    }
+
+    .product p {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+
+    .product button {
+      background-color: #fbb6ce;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      color: #000;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .product button:hover {
+      background-color: #f88faf;
+    }
+
+    #welcomePopup {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #popupContent {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      text-align: center;
+      max-width: 300px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    #popupContent h2 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    #popupContent button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      background-color: #fbb6ce;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    #popupContent button:hover {
+      background-color: #f88faf;
+    }
+
+    #logoTopRight {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      width: 60px;
+      height: auto;
+      z-index: 10000;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    @media screen and (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOGO -->
+  <img src="https://pomf2.lain.la/f/657jt5ok.png" alt="Logo Nathzz Market" id="logoTopRight">
+
+  <!-- POPUP SAMBUTAN -->
+  <div id="welcomePopup">
+    <div id="popupContent">
+      <h2>👋🏻 Selamat datang di <strong>nathzz market</strong></h2>
+      <button onclick="closePopup()">OK</button>
+    </div>
+  </div>
+
+  <!-- BACKSOUND -->
+  <audio id="bgMusic" src="noyed" preload="auto"></audio>
+
+  <!-- HEADER -->
+  <header>
+    <h1>nathzz market</h1>
+  </header>
+
+  <!-- PRODUK -->
+  <section class="products">
+    <div class="product">
+      <img src="https://pomf2.lain.la/f/wwhe595o.jpg" alt="Produk Spesial" />
+      <h2>web phising</h2>
+      <p>Rp 13.000</p>
+      <button onclick="window.open('https://gentzha.github.io/NATHAEL-GODD/', '_blank')">Beli</button>
+    </div>
+
+    <div class="product">
+      <img src="https://pomf2.lain.la/f/h58bmkt5.jpg" alt="Produk B" />
+      <h2>panel pterodactyl 1gb-unli</h2>
+      <p>Rp 12.000</p>
+      <button onclick="window.open('https://gentzha.github.io/nathael-doxingaja/', '_blank')">Beli</button>
+    </div>
+
+    <div class="product">
+      <img src="https://pomf2.lain.la/f/h58bmkt5.jpg" alt="Produk C" />
+      <h2>admin panel</h2>
+      <p>Rp 7.000</p>
+      <button onclick="window.open('https://gentzha.github.io/produk.3/', '_blank')">Beli</button>
+    </div>
+
+    <div class="product">
+      <img src="https://pomf2.lain.la/f/8g6r99yt.jpg" alt="Produk D" />
+      <h2>logo jb/hosting</h2>
+      <p>Rp 2.000</p>
+      <button onclick="window.open('https://gentzha.github.io/produk.4/', '_blank')">Beli</button>
+    </div>
+
+    <div class="product">
+      <img src="https://pomf2.lain.la/f/zqqucvl4.jpg" alt="Produk E" />
+      <h2>murid banned whatsapp</h2>
+      <p>Rp 17.000</p>
+      <button onclick="window.open('https://gentzha.github.io/produk-5/', '_blank')">Beli</button>
+    </div>
+
+    <div class="product">
+      <img src="https://pomf2.lain.la/f/x7wbht2r.jpeg" alt="Produk F" />
+      <h2>nokos wa indo</h2>
+      <p>Rp 5.000</p>
+      <button onclick="window.open('https://gentzha.github.io/produk-6/', '_blank')">Beli</button>
+    </div>
+
+    <div class="product">
+      <img src="https://pomf2.lain.la/f/x7wbht2r.jpeg" alt="Produk G" />
+      <h2>nokos wa luar</h2>
+      <p>Rp 20.000</p>
+      <button onclick="window.open('https://gentzha.github.io/produk-7/', '_blank')">Beli</button>
+    </div>
+
+    <div class="product">
+      <img src="https://pomf2.lain.la/f/w3f7qwjz.jpg" alt="Produk G" />
+      <h2>tutor doxing</h2>
+      <p>Rp 17.000</p>
+      <button onclick="window.open('https://gentzha.github.io/produk-8/', '_blank')">Beli</button>
+    </div>
+
+    <div class="product">
+      <img src="https://pomf2.lain.la/f/j8p0xbjt.jpg" alt="Produk G" />
+      <h2>Jasa Rekening Bersama (rekber)</h2>
+      <p>Rp 10.000</p>
+      <button onclick="window.open('https://gentzha.github.io/produk-9/', '_blank')">Beli</button>
+    </div>
+
+    <div class="product">
+      <img src="https://pomf2.lain.la/f/j8p0xbjt.jpg" alt="Produk G" />
+      <h2>jasa post akun/need akun</h2>
+      <p>Rp free</p>
+      <button onclick="window.open('https://gentzha.github.io/produk-10/', '_blank')">Beli</button>
+    </div>
+
+    <div class="product">
+      <img src="https://pomf2.lain.la/f/v7qh7af.jpg" alt="Produk G" />
+      <h2>jasa buat/create website</h2>
+      <p>Rp 11.000</p>
+      <button onclick="window.open('https://gentzha.github.io/lastproduk/', '_blank')">Beli</button>
+    </div>
+  </section>
+
+  <!-- SCRIPT -->
+  <script>
+    function closePopup() {
+      document.getElementById("welcomePopup").style.display = "none";
+      const music = document.getElementById("bgMusic");
+      music.play().catch(err => {
+        console.warn("Autoplay gagal:", err);
+      });
+    }
+  </script>
+
+</body>
+</html>
